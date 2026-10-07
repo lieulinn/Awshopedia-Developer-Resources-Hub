@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVHUB — Awshopedia Developer Resources</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="layout-wrapper">
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-code"></i></div>
+        <span class="brand-name">DEVHUB</span>
+      </div>
+
+      <div class="sidebar-menu">
+        <span class="menu-label">Categories</span>
+        <button class="nav-item active" data-category="All"><i class="fa-solid fa-layer-group"></i> All Resources</button>
+        <button class="nav-item" data-category="HTML"><i class="fa-brands fa-html5"></i> HTML</button>
+        <button class="nav-item" data-category="CSS"><i class="fa-brands fa-css3-alt"></i> CSS</button>
+        <button class="nav-item" data-category="JavaScript"><i class="fa-brands fa-square-js"></i> JavaScript</button>
+        <button class="nav-item" data-category="React"><i class="fa-brands fa-react"></i> React</button>
+        <button class="nav-item" data-category="Git"><i class="fa-brands fa-git-alt"></i> Git</button>
+        <button class="nav-item" data-category="GitHub"><i class="fa-brands fa-github"></i> GitHub</button>
+        <button class="nav-item" data-category="API"><i class="fa-solid fa-network-wired"></i> API</button>
+        <button class="nav-item" data-category="UI Resources"><i class="fa-solid fa-palette"></i> UI Resources</button>
+
+        <span class="menu-label" style="margin-top: 20px;">Personal</span>
+        <button class="nav-item" id="bookmarksTab"><i class="fa-solid fa-bookmark"></i> Bookmarks (<span id="bookmarkCount">0</span>)</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <p><strong>Awshopedia DevHub</strong> &copy; 2026</p>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- TOP HEADER -->
+      <header class="top-header">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search tools, libraries, documentation... (Press '/' to focus)">
+        </div>
+        <div class="header-stats">
+          <span class="stat-badge"><i class="fa-solid fa-cubes"></i> <span id="totalResources">0</span> Tools</span>
+        </div>
+      </header>
+
+      <!-- HERO BANNER -->
+      <section class="hero-banner">
+        <div class="hero-text">
+          <h1>Curated Web Dev Ecosystem</h1>
+          <p>Kumpulan *tools*, dokumentasi, pustaka, dan referensi esensial untuk mempercepat alur kerja *front-end* dan *back-end developer*.</p>
+        </div>
+      </section>
+
+      <!-- CONTENT GRID -->
+      <section class="resources-section">
+        <div class="section-header">
+          <h2 id="currentCategoryTitle">All Resources</h2>
+          <span class="count-tag" id="categoryCount">0 items</span>
+        </div>
+
+        <div class="resources-grid" id="resourcesGrid">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <i class="fa-solid fa-folder-open"></i>
+          <h3>No resources found</h3>
+          <p>Coba kata kunci pencarian lain atau ubah kategori pilihan Anda.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
